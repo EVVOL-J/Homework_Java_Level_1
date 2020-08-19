@@ -13,5 +13,6 @@ public class Exercize2 {
         String ourString="Homework";
         final int constant=2;
         var s=12;
+
     }
 }
