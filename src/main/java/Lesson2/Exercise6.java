@@ -6,14 +6,14 @@ public class Exercise6 {//** Написать метод, в который пе
     // Примеры: checkBalance([2, 2, 2, 1, 2, 2, || 10, 1]) → true, checkBalance([1, 1, 1, || 2, 1]) → true,
     // граница показана символами ||, эти символы в массив не входят.
     public static void main(String[] args) {
-        int arr1[] = {2, 2, 2, 1, 2, 2, 10, 1};
-        int arr2[] = {2, 2, 2, 1, 2, 2, 10, 5};
+        int[] arr1 = {2, 2, 2, 1, 2, 2, 10, 1};
+        int[] arr2 = {2, 2, 2, 1, 2, 2, 10, 5};
         System.out.println(checkBalance(arr1));
         System.out.println(checkBalance(arr2));
 
     }
 
-    private static boolean checkBalance(int arr[]) {
+    private static boolean checkBalance(int[] arr) {
 
         int leftSum = arr[0];
         int rightSum = arr[arr.length - 1];
