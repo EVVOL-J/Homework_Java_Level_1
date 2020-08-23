@@ -21,7 +21,7 @@ public class Exercise2 {
                 "broccoli", "carrot", "cherry", "garlic",
                 "grape", "melon", "leak", "kiwi", "mango", "mushroom",
                 "nut", "olive", "pea", "peanut", "pear", "pepper",
-                "pineapple", "pumpkin", "potato"};
+                "pineapple", "pumpkin", "potato", "meat"};
         Random rand = new Random();
         String ourWord="null";
         String guessWor=words[rand.nextInt(words.length)];
