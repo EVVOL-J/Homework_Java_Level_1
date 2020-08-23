@@ -10,7 +10,7 @@ public class Exercise2 {
 
         while (true) {
             guessWord();
-            System.out.println("play yet? Yes=1 NO=press any key");
+            System.out.println("play yet? Yes=1 NO=enter any symbol");
             if((scan.nextLine()).charAt(0)!='1') break;
         }
         scan.close();
@@ -31,9 +31,8 @@ public class Exercise2 {
             ourWord=scan.nextLine();
             if(ourWord.equals(guessWor)) break;
             String secret="";
-            for(int i=0;i<(ourWord.length()<guessWor.length() ? ourWord.length():guessWor.length());i++){
-                if(ourWord.charAt(i)==guessWor.charAt(i)) secret+=ourWord.charAt(i);
-                else secret+='#';
+            for(int i=0;i<((ourWord.length()<guessWor.length()) ? ourWord.length():guessWor.length());i++){
+                secret+=(ourWord.charAt(i)==guessWor.charAt(i)) ? ourWord.charAt(i):'#';
             }
             for(int i=secret.length()+1;i<16;i++) secret+='#';
             System.out.println(secret);
