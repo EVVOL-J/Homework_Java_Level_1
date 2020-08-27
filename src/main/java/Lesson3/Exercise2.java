@@ -22,6 +22,7 @@ public class Exercise2 {
                 "grape", "melon", "leak", "kiwi", "mango", "mushroom",
                 "nut", "olive", "pea", "peanut", "pear", "pepper",
                 "pineapple", "pumpkin", "potato", "meat"};
+        final  int numberOfConsored=15;
         Random rand = new Random();
         String ourWord="null";
         String guessWor=words[rand.nextInt(words.length)];
@@ -31,10 +32,11 @@ public class Exercise2 {
             ourWord=scan.nextLine();
             if(ourWord.equals(guessWor)) break;
             String secret="";
-            for(int i=0;i<((ourWord.length()<guessWor.length()) ? ourWord.length():guessWor.length());i++){
+            int minLength=(ourWord.length()<guessWor.length()) ? ourWord.length():guessWor.length();
+            for(int i=0;i<minLength;i++){
                 secret+=(ourWord.charAt(i)==guessWor.charAt(i)) ? ourWord.charAt(i):'#';
             }
-            for(int i=secret.length()+1;i<16;i++) secret+='#';
+            for(int i=secret.length()+1;i<=numberOfConsored;i++) secret+='#';
             System.out.println(secret);
 
         }
