@@ -28,7 +28,7 @@ public class TicTacToe {
                     System.out.println("YOU WIN");
                     break;
                 }
-                if(fullArr(arrayField)){
+                if (fullArr(arrayField)) {
                     System.out.println("DRAW");
                     break;
                 }
@@ -37,7 +37,7 @@ public class TicTacToe {
                     System.out.println("YOU LOOSE");
                     break;
                 }
-                if(fullArr(arrayField)){
+                if (fullArr(arrayField)) {
                     System.out.println("DRAW");
                     break;
                 }
@@ -45,7 +45,7 @@ public class TicTacToe {
             }
             System.out.println("play yet? Yes=1 NO=enter any symbol");
             scanner.nextLine();
-            if ( !scanner.nextLine().equals("1")) break;
+            if (!scanner.nextLine().equals("1")) break;
 
 
         }
@@ -254,15 +254,15 @@ public class TicTacToe {
     } // функция, которая определяет куда ставить круг
 
     private static boolean fullArr(char[][] arrayField) {
-        boolean full=true;
+        boolean full = true;
         for (int i = 0; i < arrayField.length; i++) {
-            if(full==false) break;
-            for(int j=0; j<arrayField.length;j++){
-                if(arrayField[i][j]==signPoint) full=false;
-                if(full==false) break;
+            if (full == false) break;
+            for (int j = 0; j < arrayField.length; j++) {
+                if (arrayField[i][j] == signPoint) full = false;
+                if (full == false) break;
             }
         }
-        return  full;
+        return full;
     }  //проверка на заполнение всего массива
 
 }
