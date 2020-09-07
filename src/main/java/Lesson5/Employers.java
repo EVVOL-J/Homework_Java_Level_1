@@ -17,8 +17,8 @@ public class Employers {
         personArr[3]=new Employee("Yakovchic Olesya Nicolaevna", "architector", "yakov@mail.ru",  "+7(985)-171-30-04", 900000, age[3]);
         personArr[4]=new Employee( age[4]);
         System.out.println("Информация о сотрудниках старше 40 лет ");
-        for(int i=0; i<personArr.length; i++){
-            if(personArr[i].getAge()>=maxAge) personArr[i].info();
+        for(Employee employee : personArr){
+            if(employee.getAge()>=maxAge) employee.info();
         }
 
     }

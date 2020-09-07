@@ -8,15 +8,15 @@ public class Employee {
     private int salary;
     private int age;
 
-    Employee() {
+    public Employee() {
         this(30);
     }
-    Employee(int age){
+    public Employee(int age){
         this("Nasarishin Nikita Andreevich", "progremmer", "nasar@mail.ru", "+7(985)-171-30-00", 60000, age);
 
     }
 
-    Employee(String fullName, String position, String email, String telefonNumber, int salary, int age) {
+   public Employee(String fullName, String position, String email, String telefonNumber, int salary, int age) {
         this.fullName = fullName;
         this.position = position;
         this.email = email;
@@ -25,7 +25,7 @@ public class Employee {
         this.age = age;
     }
 
-    void info() {
+    public void info() {
         System.out.println("ФИО: " + this.fullName + "; Должность: " + this.position + "; Эмэйл: " + this.email + "; Телефонный номер: " + this.telefonNumber + "; Зарплата: " + this.salary + "; Возраст: " + this.age);
     }
 
