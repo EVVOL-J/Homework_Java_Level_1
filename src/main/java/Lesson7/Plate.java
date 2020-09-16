@@ -3,11 +3,11 @@ package Lesson7;
 public class Plate {
     private int food;
 
-    public Plate(int food){
-        this.food=food;
+    public Plate(int food) {
+        this.food = food;
     }
 
-    public void info(){
+    public void info() {
         System.out.println("Plate: " + food);
     }
 
@@ -19,18 +19,19 @@ public class Plate {
         this.food = food;
     }
 
-    public boolean decreaseFood(int n){
-        if(food-n>=0) {
+    public boolean decreaseFood(int n) {
+        if (food - n >= 0) {
             food -= n;
             return true;
+        } else {
+            System.out.println("В тарелке недостаточно еды");
+            return false;
         }
-        else {System.out.println("В тарелке недостаточно еды");
-        return false;}
     }
 
-    public void addFood(int add_Food){
-        food+=add_Food;
-        System.out.println("В тарелку добавлена еда "+ add_Food);
+    public void addFood(int add_Food) {
+        food += add_Food;
+        System.out.println("В тарелку добавлена еда " + add_Food);
         info();
     }
 }
