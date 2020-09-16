@@ -31,7 +31,7 @@ public class Plate {
 
     public void addFood(int add_Food) {
         food += add_Food;
-        System.out.println("В тарелку добавлена еда " + add_Food);
+        System.out.println("В тарелку добавлена еды " + add_Food);
         info();
     }
 }
